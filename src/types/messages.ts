@@ -48,7 +48,7 @@ export type ServerToClientMessage =
   | { type: "PRESENCE_UPDATED"; users: TUser[] }
   | { type: "CARD_ADDED"; card: TCard; column: TColumnType; boardColumn: string[] }
   | { type: "CARD_DELETED"; cardId: string; column: TColumnType; boardColumn: string[] }
-  | { type: "CARD_MOVED"; boardState: Record<TColumnType, string[]> }
+  | { type: "CARD_MOVED"; fromCol: TColumnType; fromBoardColumn: string[]; toCol: TColumnType; toBoardColumn: string[] }
   | { type: "CARD_LIKED"; cardId: string; likes: TLike[] }
   | { type: "PHASE_CHANGED"; phase: TRoomPhase }
   | { type: "DISCUSSION_INITIATED"; topics: TopicJSON[] }
