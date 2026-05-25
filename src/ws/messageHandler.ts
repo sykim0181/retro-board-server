@@ -377,6 +377,7 @@ async function handleSaveMeeting(ws: WebSocket): Promise<void> {
       topics: topicList,
       tasks: taskList,
       date: Timestamp.now(),
+      isFinished: true,
     });
 
     send(ws, { type: "MEETING_SAVED" });
