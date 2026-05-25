@@ -1,6 +1,6 @@
 import { WebSocket } from "ws";
 import { db, Timestamp } from "../lib/firebase";
-import { RoomState, TReaction, TUser, TopicDB } from "../types/types";
+import { RoomState, TReaction, TUser, TopicDB } from "../types";
 import { ClientToServerMessage } from "../types/messages";
 import {
   broadcast,

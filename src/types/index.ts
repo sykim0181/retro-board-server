@@ -53,19 +53,25 @@ export type TTask = {
   createdAt: string;
 };
 
-export type SummaryResult = {
-  keyPoints: string[];
-  commonConcerns: string[];
-  issues: string[];
-  implicitIssues: string[];
-  followUps: string[];
-};
-
 export type TopicDB = {
   card: TCard;
   reactions: TReaction[];
   chats: (TMessage | TTask)[];
 };
+
+export type MeetingDB = {
+  topics: TopicDB[];
+  tasks: TTask[];
+};
+
+export type TRoom = {
+  name: string;
+  id: string;
+  ownerId: string;
+  date: Date;
+};
+
+export type TMeeting = TRoom & MeetingDB;
 
 export type Board = Map<TColumnType, string[]>;
 
@@ -90,3 +96,11 @@ export const createInitialRoomState = (): RoomState => ({
   messages: new Map(),
   tasks: new Map(),
 });
+
+export type SummaryResult = {
+  keyPoints: string[];
+  commonConcerns: string[];
+  issues: string[];
+  implicitIssues: string[];
+  followUps: string[];
+};

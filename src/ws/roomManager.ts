@@ -7,7 +7,7 @@ import {
   TTask,
   TUser,
   createInitialRoomState,
-} from "../types/types";
+} from "../types";
 import {
   RoomStateJSON,
   ServerToClientMessage,

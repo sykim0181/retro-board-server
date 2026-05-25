@@ -9,7 +9,7 @@ import {
   TTask,
   TTopic,
   TUser,
-} from "./types";
+} from ".";
 
 // Client → Server
 export type ClientToServerMessage =
