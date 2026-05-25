@@ -53,6 +53,14 @@ export type TTask = {
   createdAt: string;
 };
 
+export type SummaryResult = {
+  keyPoints: string[];
+  commonConcerns: string[];
+  issues: string[];
+  implicitIssues: string[];
+  followUps: string[];
+};
+
 export type TopicDB = {
   card: TCard;
   reactions: TReaction[];
