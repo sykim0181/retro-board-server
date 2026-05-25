@@ -1,11 +1,9 @@
-import dotenv from "dotenv";
+import "dotenv/config";
 import http from "http";
 import express from "express";
 import cors from "cors";
 import summaryRouter from "./routes/summary";
 import { attachWebSocketServer } from "./ws/wsServer";
-
-dotenv.config();
 
 const app = express();
 app.use(
